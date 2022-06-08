@@ -45,11 +45,11 @@ def getOHBRes(stavka):
     d4 = 0
     d5 = 0
 
-    getD1 = true
-    getD2 = true
-    getD3 = true
-    getD4 = true
-    getD5 = true
+    getD1 = True
+    getD2 = True
+    getD3 = True
+    getD4 = True
+    getD5 = True
     col = 10
 
     while (getD1
@@ -81,15 +81,15 @@ def getOHBRes(stavka):
         if (d5 > 9):
             d5 = 0
             
-        if (random.randit(0, 20) == 1):
+        if (random.randint(0, 20) == 1):
             getD1 = False
-        if (random.randit(0, 20) == 1):
+        if (random.randint(0, 20) == 1):
             getD2 = False
-        if (random.randit(0, 20) == 1):
+        if (random.randint(0, 20) == 1):
             getD3 = False
-        if (random.randit(0, 20) == 1):
+        if (random.randint(0, 20) == 1):
             getD4 = False
-        if (random.randit(0, 20) == 1):
+        if (random.randint(0, 20) == 1):
             getD5 = False
 
         time.sleep(0.1)
@@ -251,7 +251,7 @@ def getRoulette(visible):
     tickTime = random.randint(100, 200) / 10000
     mainTime = 0
     number = random.randint(0, 38)
-    increaseTickTime = random.randit(100, 110) / 100
+    increaseTickTime = random.randint(100, 110) / 100
     col = 1
 
     while (mainTime < 0.7):
@@ -411,7 +411,7 @@ def saveMoney(moneyToSave):
         f.write(str(moneyToSave))
         f.close()
     except:
-        print("Ошибка создания фийла, Наше Казино закрывается!")
+        print("Ошибка создания фaйла, Наше Казино закрывается!")
         quit(0)
 
 def color(c):
