@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
 from random import randint
+from PIL import ImageTk, Image
 
 def setupHours():
     global state01, state02, state03, state04
@@ -339,7 +340,7 @@ def insertText(s):
     textDiary.insert(INSERT, s + "\n")
     textDiary.see(END)
 
-def horsPlaceWindow():
+def horsePlaceInWindow():
     hours01.place(x=int(x01), y=20)
     hours02.place(x=int(x01), y=100)
     hours03.place(x=int(x01), y=180)
@@ -398,7 +399,7 @@ root.resizable(False, False)
 
 root.geometry(f"{WIDTH}x{HEIGHT}+{POS_X}+{POS_Y}")
 
-road_image = PhotoImage(file="road.png")
+road_image = ImageTk.PhotoImage(Image.open('road.png'))
 road = Label(root, image=road_image)
 road.place(x=0, y=17)
 
