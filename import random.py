@@ -9,7 +9,7 @@ x = random.choice(highDiapazon)
 y = int(input(f"Корень из {x}?" )) #x вопрос
 z = int(x ** 0.5)
 
-if y == x:
+if y == z:
     print("правильно")
 else:
     print("Неправильно")
